@@ -1,10 +1,10 @@
-# Android Project 3 - *Name of App Here*
+# Android Project 3 - *Flixster*
 
-Submitted by: **Your Name Here**
+Submitted by: **Jorge M. Diaz**
 
-**Name of your app** is a movie browsing app that allows users to browse movies currently playing in theaters.
+**Flixster** is a movie browsing app that allows users to browse movies currently playing in theaters.
 
-Time spent: **X** hours spent in total
+Time spent: **10** hours spent in total
 
 ## Required Features
 
