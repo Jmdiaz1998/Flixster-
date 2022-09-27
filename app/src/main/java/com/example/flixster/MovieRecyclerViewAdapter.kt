@@ -10,18 +10,16 @@ import com.bumptech.glide.Glide
 
 
 import com.example.flixster.R
-import com.google.gson.JsonArray
-import org.json.JSONArray
 
 /**
  * [RecyclerView.Adapter] that can display a [BestSellerBook] and makes a call to the
  * specified [OnListFragmentInteractionListener].
  */
-class BestSellerBooksRecyclerViewAdapter(
+class MovieRecyclerViewAdapter(
     private val movies: List<Movie>,
     private val mListener: OnListFragmentInteractionListener?
     )
-    : RecyclerView.Adapter<BestSellerBooksRecyclerViewAdapter.BookViewHolder>() {
+    : RecyclerView.Adapter<MovieRecyclerViewAdapter.BookViewHolder>() {
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): BookViewHolder {
         val view = LayoutInflater.from(parent.context)
             .inflate(R.layout.movies, parent, false)
@@ -34,20 +32,17 @@ class BestSellerBooksRecyclerViewAdapter(
      */
     inner class BookViewHolder(val mView: View) : RecyclerView.ViewHolder(mView) {
         var mItem :Movie? = null
-        val mMovieTitle: TextView = mView.findViewById<View>(R.id.movie_title) as TextView
-        val mMovieDescription: TextView = mView.findViewById<View>(R.id.movie_description) as TextView
-        val mMovieProduction: TextView = mView.findViewById<View>(R.id.movie_title) as TextView
+        val mMovieTitle = mView.findViewById<View>(R.id.movie_title) as TextView
+        val mMovieDescription = mView.findViewById<View>(R.id.movie_description) as TextView
         val mMovieImage: ImageView = mView.findViewById<View>(R.id.movie_image) as ImageView
 //        id
 //        year
 //        production
 
 
-
-
-        override fun toString(): String {
-            return mMovieTitle.toString() + " '" + "'"
-        }
+//        override fun toString(): String {
+//            return mMovieTitle.toString() + " '" + mMovieDescription + "'"
+//        }
     }
 
     /**
@@ -58,13 +53,14 @@ class BestSellerBooksRecyclerViewAdapter(
 
         holder.mItem = movie
         holder.mMovieTitle.text = movie.title
-        holder.mMovieDescription.text = movie.description
+        holder.mMovieDescription.text = movie.overview
 
 
         Glide.with(holder.mView)
-            .load(movie.movieImage)
+            .load("https://image.tmdb.org/t/p/w500" + movie.poster_path)
             .centerInside()
             .into(holder.mMovieImage)
+
 
         holder.mView.setOnClickListener {
             holder.mItem?.let { movie ->

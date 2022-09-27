@@ -10,8 +10,10 @@ import com.google.gson.annotations.SerializedName
  */
 
 data class Movie(
-    var id: String,
-    var title: String,
-    var description: String,
-    var imageURL: String,
+    val title: String,
+    val overview: String,
+    val poster_path: String,
 )
+
+
+

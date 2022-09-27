@@ -1,7 +1,7 @@
 package com.codepath.flixster
 
 /**
- * This interface is used by the [BestSellerBooksRecyclerViewAdapter] to ensure
+ * This interface is used by the [MovieRecyclerViewAdapter] to ensure
  * it has an appropriate Listener.
  *
  * In this app, it's implemented by [BestSellerBooksFragment]
