@@ -8,7 +8,7 @@ Time spent: **10** hours spent in total
 
 ## Required Features
 
-The following **required** functionality is completed:
+The following functionality is completed:
 
 - [x] **Make a request to [The Movie Database API's `now_playing`](https://developers.themoviedb.org/3/movies/get-now-playing) endpoint to get a list of current movies**
 - [x] **Parse through JSON data and implement a RecyclerView to display all movies**
